@@ -1,8 +1,3 @@
-소벨 필터 적용전
-[brainct_001.bmp](https://github.com/user-attachments/files/22040375/brainct_001.bmp)
-소벨 필터 적용후
-[output_edge.bmp](https://github.com/user-attachments/files/22040381/output_edge.bmp)
-
 ~~~~~~~~~~~~~~~~~~~~~
 #include <stdio.h>
 #include <stdlib.h>
