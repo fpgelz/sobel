@@ -221,11 +221,6 @@ int main() {
 
     fclose(outFile);
 
-    // 1. ======== 파일 생성 추가 ========
-
-
-    // 2. ======== MEM 파일 생성 부분 (추가) ========
-
     // MEM 파일 생성
     if (fopen_s(&memOutFile, memFile, "w") != 0 || memOutFile == NULL) {
         printf("MEM 파일을 생성할 수 없습니다: %s\n", memFile);
@@ -253,8 +248,6 @@ int main() {
     //printf("출력 파일: %s\n", outputFile);
     //printf("그레이스케일 8비트 BMP로 저장되었습니다.\n");
 
-
-    //////
 
 
     // 3. 그레이스케일 변환 후 엣지 검출 추가(라인 170 근처)
@@ -305,12 +298,12 @@ int main() {
     }
     fclose(edgeOutFile);
 
-    // 6. 메모리 해제 부분 수정
+    // 메모리 해제
     free(imageData);
     free(grayscaleData);
     free(edgeData);                                  // 엣지 데이터 메모리 해제 추가
 
-    // 7. 완료 메시지 수정
+    // 완료 메시지 수정
     printf("\n변환 완료!\n");
     printf("그레이스케일 BMP 파일: %s\n", outputFile);
     printf("엣지 검출 BMP 파일: %s\n", edgeFile);        // 엣지 BMP 파일 메시지 추가
